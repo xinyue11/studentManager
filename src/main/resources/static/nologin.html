@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>登录界面</title>
+</head>
+
+<body>
+<div class="box">
+    <div class="left"></div>
+    <div class="right">
+        <h4>登 录</h4>
+        <form action="/loginser" method="post">
+            <input id="name" class="acc" type="text" name="username" placeholder="用户名" >
+
+            <input class="acc" type="password"name="password" placeholder="密码">
+
+
+            <input class="submit" type="submit" value="Login" onclick="getname()">
+        </form>
+
+        <div id="errorMsg" STYLE="color: red;font-size: 25px;position: absolute;top: 240px">请先登录</div>
+
+    </div>
+</div>
+
+<script>
+
+
+    function getname(){
+        let name = document.getElementById("name");
+        // alert(name.value)
+        var gh=localStorage.setItem("name",name.value);
+    }
+
+</script>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

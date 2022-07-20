@@ -1,0 +1,48 @@
+.student{
+    width: 200px;
+    height: 46px;
+    line-height: 46px;
+    background: rgba(168, 152, 241, 0.67);
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 27px;
+    animation: zoomIn 1.5s infinite;
+    text-align: center;
+
+
+}
+
+.grade {
+    width: 200px;
+    height: 46px;
+    line-height: 46px;
+    background: rgba(168, 152, 241, 0.67);
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 27px;
+    animation: zoomIn 1.5s infinite;
+    text-align: center;
+
+
+}
+.teacher {
+    width: 200px;
+    height: 46px;
+    line-height: 46px;
+    background: rgba(168, 152, 241, 0.67);
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 27px;
+    text-align: center;
+}
+
+.lesson {
+    width: 200px;
+    height: 46px;
+    line-height: 46px;
+    background: rgba(168, 152, 241, 0.67);
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 27px;
+    text-align: center;
+}

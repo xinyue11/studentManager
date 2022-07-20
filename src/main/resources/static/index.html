@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/button.css">
+    <title >首页</title>
+</head>
+
+<body>
+<div class="box">
+    <div class="left"></div>
+    <div class="right">
+        <h4 style="position: absolute;top: 100px">首页</h4>
+
+        <p style="font-size: 22px;color:mediumpurple;position: absolute;top: 290px" id="time"></p>
+
+        <div style="font-size: 20px;color:mediumpurple;position: absolute;top: 330px" id="gh"></div>
+
+        <div style="position: absolute;top:370px">
+            <input class='student' type="button" value="学生信息管理" onclick="student()">
+        </div>
+
+        <div id="div" style="position: absolute;top:440px">
+            <input  class="grade" type="button" onclick="grade()" value="学生成绩管理" >
+
+        </div>
+
+        <div style="position: absolute;top:510px">
+            <input  class="teacher" type="button" onclick="teacher()" value="教师信息管理">
+        </div>
+
+        <div style="position: absolute;top:580px">
+            <input  class="lesson" type="button" onclick="lesson()" value="课程信息管理">
+        </div>
+
+
+
+    </div>
+</div>
+<script>
+    var gh=localStorage.getItem("name");
+    document.getElementById("gh").innerHTML='教师工号：'+gh;
+
+    function time(){
+        var date = new Date();
+        var year = date.getFullYear();//年
+        var month = date.getMonth()+1;//月；因为month属性从0开始所以要加1
+        var day = date.getDate();//天
+        var week = date.getDay();//周
+        switch (week){
+            case 1:
+             var weeks='一';
+                break;
+            case 2:
+                weeks='二';
+                break;
+            case 3:
+                weeks='三';
+                break;
+            case 4:
+                weeks='四';
+                break;
+            case 5:
+                weeks='五';
+                break;
+
+            case 6:
+                weeks='六';
+                break;
+
+            case 0:
+                weeks='日';
+                break;
+
+
+        }
+       // alert(weeks);
+        var hour = date.getHours();//小时
+        var minute = date.getMinutes();//分钟
+        var second = date.getSeconds();//秒
+        minute = minute<10?"0"+minute:minute;
+        second = second<10?"0"+second:second;
+        var currentTime = year+"-"+month+"-"+day+" "+"星期"+weeks+" "+hour+":"+minute+":"+second;
+        document.getElementById("time").innerHTML=currentTime;
+    }
+    setInterval("time()",1000);//每隔1000毫秒（1秒=1000毫秒）显示一次当前时间
+
+    function student(){
+        window.location.href="students.html";
+    }
+    function grade(){
+        window.location.href="grads.html";
+    }
+    function teacher(){
+        window.location.href="teachers.html";
+    }
+    function lesson(){
+        window.location.href="lessons.html";
+    }
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
